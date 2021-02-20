@@ -19,6 +19,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-unused-vars': 0,
     'react/prop-types': 0,
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
