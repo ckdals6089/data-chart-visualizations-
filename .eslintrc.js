@@ -5,7 +5,11 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
   plugins: ['prettier', 'react', 'import'],
   parserOptions: {
     ecmaFeatures: {
@@ -15,6 +19,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'react/prop-types': 0,
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'prettier/prettier': [
