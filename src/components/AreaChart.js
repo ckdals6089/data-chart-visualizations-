@@ -9,7 +9,7 @@ const AreaChart = ({ areaData }) => {
       for (let i = 0; i < data.length; i++) {
         data[i].x = i;
       }
-      const margin = { top: 0, right: 40, bottom: 35, left: 20 };
+      const margin = { top: 60, right: 40, bottom: 35, left: 20 };
       const width = 700 - margin.left - margin.right;
       const height = 400 - margin.top - margin.bottom;
 
@@ -19,7 +19,6 @@ const AreaChart = ({ areaData }) => {
         .range([0, width]);
 
       const y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
-
       const svg = d3
         .select('.area-chart')
         .append('svg')

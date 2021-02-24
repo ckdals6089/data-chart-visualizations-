@@ -6,7 +6,7 @@ const Area = ({ areaData, selectedItem }) => {
   return (
     <div className="area-chart-container">
       <div className="area-chart-header">
-        <span>{selectedItem} SCORE TREND</span>
+        <span>{selectedItem} TREND</span>
         <ul>
           <li>Day</li>
           <li>Week</li>

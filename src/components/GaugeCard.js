@@ -2,10 +2,12 @@ import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 
 const GaugeCard = ({ gauge, onSelectedItem }) => {
+  // Initialized gauge
   const { name, score, vsly, sample } = gauge;
   return (
     <div className="card-container" id={name} onClick={onSelectedItem}>
       <span className="name">{name}</span>
+      {/* Create Circle Chart */}
       <CircularProgressbar
         className="card-circle"
         value={score}

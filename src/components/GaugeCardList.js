@@ -19,6 +19,7 @@ const GaugeCardList = ({ gaugeData, setSelectedItem }) => {
           </li>
         </ul>
       </span>
+      {/* Mapping GaugeData Cards */}
       <div className="gauge-list">
         {gaugeData.map((item, index) => {
           return (

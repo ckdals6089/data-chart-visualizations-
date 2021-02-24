@@ -117,15 +117,16 @@
 .card-container .name{
   margin-top: 9%;
 }
-.card-container .sample{
-  position: relative;
-  top: -100%;
-}
+
 .card-container .score{
   font-size: 24px;
   position: relative;
   top: -205%;
   left: 2%;
+}
+.card-container .sample{
+  position: relative;
+  top: -100%;
 }
 .card-container .vsly{
   position: relative; 
@@ -182,7 +183,45 @@
    top: 40%;
    right: 5%;;
  }
-
+ @media screen and (max-width: 1400px) {
+  .header .pin {
+    margin-left: 56%;
+    margin-right: 4%;
+}
+  .card-container .name {
+    font-size: 12px;
+    position: relative;
+    top: 10%;
+    left: 2%;
+}
+  .card-container .score {
+    font-size: 12px;
+    position: relative;
+    top: -100%;
+    left: 2%;
+}
+.card-container .sample{
+  top: -20%;
+  font-size: 15px;
+}
+.card-container .vsly{
+  top: -30%;
+  left: -1px;
+}
+  .gauge-list{
+    display: flex;
+  }
+  .area-chart{
+    position: absolute;
+    top: 54%;
+    right: 17%;
+  }
+  .card-container{
+    margin: 0% 22% 0% 4%;
+    height: 13rem;
+    width: 5rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .header {
     font-size: 17px
@@ -195,6 +234,9 @@
   .sidenav div{
     width: 0px;
     height: 0px;
+  }
+  .gauge-list{
+    display: flex;
   }
 }
 
