@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { IoAlertCircleSharp } from 'react-icons/io5';
-import toolDatas from '../data/data';
-import Card from './GaugeCard.js';
-const CardList = () => {
-  const [gaugeData, setGaugeData] = useState([]);
-  const [areaData, setAreaData] = useState([]);
-  useEffect(() => {
-    const allData = toolDatas;
-    setGaugeData(allData.gaugeData);
-    setAreaData(allData.areaData);
-  }, []);
-
+import GaugeCard from './GaugeCard.js';
+const GaugeCardList = ({ gaugeData, setSelectedItem }) => {
   return (
     <div className="card-list-container">
       <span className="row">Filters</span>
@@ -29,12 +20,19 @@ const CardList = () => {
         </ul>
       </span>
       <div className="gauge-list">
-        {Object.values(gaugeData).map((item, index) => {
-          return <Card key={index} gauge={item} />;
+        {gaugeData.map((item, index) => {
+          return (
+            <GaugeCard
+              id={index}
+              key={index}
+              gauge={item}
+              onSelectedItem={() => setSelectedItem(item.name)}
+            />
+          );
         })}
       </div>
     </div>
   );
 };
 
-export default CardList;
+export default GaugeCardList;

@@ -1,11 +1,10 @@
-import { text } from '@fortawesome/fontawesome-svg-core';
 import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
-const GaugeCard = ({ gauge }) => {
+
+const GaugeCard = ({ gauge, onSelectedItem }) => {
   const { name, score, vsly, sample } = gauge;
-  console.log(gauge);
   return (
-    <div className="card-container">
+    <div className="card-container" id={name} onClick={onSelectedItem}>
       <span className="name">{name}</span>
       <CircularProgressbar
         className="card-circle"
@@ -25,12 +24,7 @@ const GaugeCard = ({ gauge }) => {
         }}
       />
       <span className="score">{`${score}%`}</span>
-      {!vsly ? (
-        <span className="vsly">null</span>
-      ) : (
-        <span className="vsly">{vsly}</span>
-      )}
-
+      <span className="vsly">{vsly || 'null'}</span>
       <span className="sample">Sample: {sample}</span>
     </div>
   );
