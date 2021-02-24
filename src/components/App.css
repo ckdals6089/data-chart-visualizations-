@@ -1,0 +1,215 @@
+
+.main-page{
+  display: flex;
+ }
+/* Nav */
+.nav-span{
+ color: white;
+ display: block;
+ padding: .5rem 1rem;
+ padding-right: .5rem;
+ padding-left: .5rem;
+}
+.nav-container{
+  margin-left: 4%;
+  background-color: rgb(4, 151, 242);
+  text-align: center;
+}
+/* Side Nav */
+.sidenav{
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 4%;
+  left: 0;
+  background-color:rgb(4, 42, 124);
+  overflow-x: hidden;
+  padding-top: 4%;
+}
+.sidenav div{
+  text-align: center;
+  padding: 5% 18% 7% 17%;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+.sidenav_icon{
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+/* Header */
+.header{
+  margin-bottom: 40px;
+}
+.header h4{
+  margin-top: 3%;
+  margin-left: 15%;
+}
+.header div{
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  height: 55px;
+}
+.header span{
+  margin-top: 10px;
+  font-size: 30px;
+  margin-left: 15%;
+  margin-bottom: 80px;
+}
+
+.header .pin{
+  cursor: pointer;
+  margin-left: 55%;
+  margin-right: 10%;
+}
+
+/* Card List */
+.card-list-container{
+  width: 35%;
+  height: 600px;
+  margin-left: 15%;
+}
+.card-list-container .row{
+  margin-bottom: 10px;
+}
+.card-list-container span ul{
+  padding-inline-start: 0px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+
+}
+.card-list-container span ul li{
+  margin: 15px 10px 15px 20px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.card-list-container span ul li span{ 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.square-blue {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(33, 85, 168);;
+}
+.square-grey {
+  height: 15px;
+  width: 15px;
+  background-color: grey;
+}
+/* Card */
+.card-container{
+  float: left;
+  width: 30%;
+  padding: 0px;
+  height: 16rem;
+  display: grid;
+  margin: 1% 3% 5% 0%;
+  border: 0.1rem solid black;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.card-container .name{
+  margin-top: 9%;
+}
+.card-container .sample{
+  position: relative;
+  top: -100%;
+}
+.card-container .score{
+  font-size: 24px;
+  position: relative;
+  top: -205%;
+  left: 2%;
+}
+.card-container .vsly{
+  position: relative; 
+  top: -300%;
+  left: -1px;
+}
+.gauge-list{
+  content: "";
+  display: table;
+  clear: both;
+}
+.card-circle{
+  width: 65%;
+  position: relative;
+  top: 15%;
+  left: 17%;
+}
+/* Area Chart */
+.area-chart-container{
+  width: 40%;
+  height: 600px;
+  margin-left: 20px;
+}
+.area-chart-container div{
+  display: flex;
+}
+.area-chart-container span{
+  margin-right: 40px;
+}
+.area-chart-container ul{
+  list-style: none;
+  display: flex;
+}
+.area-chart-container ul li{
+  cursor: pointer;
+  color:white;
+  margin-right: 10px;
+  border: 1px solid none;
+  padding: 5px 7px 4px 7px;
+  background-color:rgb(33, 85, 168);
+  border-radius: 5px;
+}
+.area-chart-container ul li:nth-child(1){
+  background-color:rgb(199, 223, 237); 
+ }
+.area-chart-container ul li:nth-child(3){
+  background-color:rgb(69, 100, 126)
+ }
+ .area-chart-header{
+  align-items: baseline;
+ }
+ .area-chart{
+   position: absolute;
+   top: 40%;
+   right: 5%;;
+ }
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 17px
+  }
+  .sidenav{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .sidenav div{
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pin{
+    visibility: hidden;
+  }
+  .header h4{
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: 8%;
+  }
+  .header div span{
+    font-size: 20px;
+    margin-left: 7%;
+  }
+}
+
